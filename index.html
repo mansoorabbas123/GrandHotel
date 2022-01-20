@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
     <!-- Favicon -->
@@ -31,7 +31,9 @@
     <header id="header">
       <div class="sidebar header-item">
         <div class="toggle">
-          <i class="fas fa-bars"></i>
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
         <div class="social-links">
           <i class="fab fa-facebook"></i>
@@ -66,16 +68,178 @@
           </div>
         </div>
         <nav class="navbar">
-          <div class="nav-item"><a href="#">Home</a></div>
-          <div class="nav-item"><a href="#">About Us</a></div>
-          <div class="nav-item"><a href="#">Rooms</a></div>
+          <div class="nav-item"><a href="/">Home</a></div>
+          <div class="nav-item"><a href="#about">About Us</a></div>
+          <div class="nav-item"><a href="#rooms">Rooms</a></div>
           <div class="nav-item"><a href="#">Events</a></div>
-          <div class="nav-item"><a href="#">Customer</a></div>
-          <div class="nav-item"><a href="#">Contact</a></div>
+          <div class="nav-item"><a href="#testimonial">Customer</a></div>
+          <div class="nav-item"><a href="#contact">Contact</a></div>
         </nav>
         <p>© 2020 Grand Hotel All Rights Reserved</p>
       </div>
     </header>
+
+    <!-- ABOUT US  -->
+
+    <section id="about">
+      <div class="content-wrapper">
+        <h1>ABOUT US</h1>
+        <div class="about-line">
+          <div class="about-line1"></div>
+          <div class="about-line2"></div>
+        </div>
+
+        <h2>Grand Hotel</h2>
+        <p>
+          Welcome to Grand Hotel. Since 1919 Grand Hotel is the most recognized
+          name in the industry, travelers all over the world have been saying
+          “Take me to the Grand Hotel” for almost a century. And because of our
+          innovative approach to products, amenities and service, Grand Hotel
+          continues to be synonymous with hotel across the globe.
+        </p>
+      </div>
+      <div class="img-wrapper">
+        <div class="image-box image-box-4">
+          <img src="./img//about-us-img-4.jpeg" class="img-4" alt="" />
+        </div>
+        <div class="image-box image-box-3">
+          <img src="./img//about-us-img-3.jpeg" class="img-3" alt="" />
+        </div>
+        <div class="image-box image-box-2">
+          <img src="./img//about-us-img-2.jpeg" class="img-2" alt="" />
+        </div>
+        <div class="image-box image-box-1">
+          <img src="./img//about-us-img-1.jpeg" class="img-1" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS -->
+
+    <section id="rooms">
+      <h1>Rooms In Grand Hotel</h1>
+      <div class="rooms-line">
+        <div class="rooms-line1"></div>
+        <div class="rooms-line2"></div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/single-room.jpeg" alt="" />
+          </div>
+          <h4 class="card-title">Single Room</h4>
+          <p class="card-desc">Guest room, 1 King</p>
+          <p class="price">$ 99</p>
+          <button class="btn card-btn">
+            BOOK NOW <i class="fas fa-angle-double-right"></i>
+          </button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./img//double-room.jpeg" alt="" />
+          </div>
+          <h4 class="card-title">Double Room</h4>
+          <p class="card-desc">Guest room, 2 Twin/Single Bed(s)</p>
+          <p class="price">$ 199</p>
+          <button class="btn card-btn">
+            BOOK NOW <i class="fas fa-angle-double-right"></i>
+          </button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/vip.jpeg" alt="" />
+          </div>
+          <h4 class="card-title">VIP</h4>
+          <p class="card-desc">Executive lounge access, Guest room, 1 King</p>
+          <p class="price">$ 399</p>
+          <button class="btn card-btn">
+            BOOK NOW <i class="fas fa-angle-double-right"></i>
+          </button>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./img/lux.jpeg" alt="" />
+          </div>
+          <h4 class="card-title">Suite</h4>
+          <p class="card-desc">Suite, 1 King with top of the line amenities.</p>
+          <p class="price">$ 599</p>
+          <button class="btn card-btn">
+            BOOK NOW <i class="fas fa-angle-double-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="btn btn-container">
+        <button class="btn rooms-btn">CHECK ALL ROOMS</button>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL  -->
+
+    <section id="testimonial">
+      <h1>Our Customers</h1>
+      <div class="testimonial-line">
+        <div class="testimonial-line1"></div>
+        <div class="testimonial-line2"></div>
+      </div>
+      <p>
+        Find out what our guests think of our hotels and rewards program with
+        The Grand Hotel's verified guest reviews
+      </p>
+      <div class="testimonial-card-wrapper">
+        <div class="testimonial-card">
+          <div class="testimonial-card-img">
+            <img src="./img/customer-1.jpeg" alt="" />
+          </div>
+          <div class="testimonial-card-info">
+            <h3>Helen Doe</h3>
+            <p class="p1">Happy Customer</p>
+            <p>
+              "Grand Hotel takes care of you. In fact, in my experience GH goes
+              above and beyond to always cater to the needs of their customers
+              so their guests can have one less thing to worry about."
+            </p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-card-img">
+            <img src="./img//customer-2.jpeg" alt="" />
+          </div>
+          <div class="testimonial-card-info">
+            <h3>Monica Smith</h3>
+            <p class="p1">Happy Customer</p>
+            <p>
+              "Quality for rooms and service were very good. I felt safe and
+              well protected. Shops and restaurants inside the hotel were very
+              well priced and very good quality as well. Location of hotel was
+              near my convention center."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-wrapper">
+        <div class="content content-1">
+          <h1>Grand Hotel</h1>
+          <p>support@grandhotel.com</p>
+          <p>New York,Main Street 123</p>
+          <p>Tel: +123 456 789</p>
+        </div>
+        <div class="content content-2">
+          <h1>Contact</h1>
+          <p>Sign Up for News</p>
+          <form action="">
+            <input type="text" placeholder="Your email..." />
+            <button>Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <p>Copyright © 2020. Grand Hotel. All Rights Reserved</p>
+      <p class="p2">Made by <span>Mansoor Abbas</span></p>
+    </footer>
     <script src="js/app.js"></script>
   </body>
 </html>

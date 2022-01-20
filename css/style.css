@@ -4,24 +4,17 @@
   box-sizing: border-box;
 }
 
-:root {
-  --primaryColor: #df8b50;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
 }
 
-/*
-h1,
-h2,
-h3,
-h4,
-h5 {
-} */
-/* body {
-  overflow-x: hidden;
-} */
+:root {
+  --primaryColor: #df8b50;
+}
 
 /*-----------------------------------------------------------------------------------------------------------
 -----------------------------------------------HEADER--------------------------------------------------------
@@ -33,9 +26,7 @@ h5 {
   height: 100vh;
 }
 
-/* .header-item {
-} */
-
+/*-------------sidebar---------*/
 .sidebar {
   width: 4vw;
   display: flex;
@@ -44,12 +35,33 @@ h5 {
   height: 96vh;
   justify-content: space-between;
   background-color: rgb(247, 247, 247);
-  z-index: 1;
+  z-index: 2;
   height: 100%;
+  position: fixed;
 }
 
 .sidebar .toggle {
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.toggle .line2 {
+  width: 20px;
+  border: 1.5px solid black;
+}
+.toggle .line1,
+.toggle .line3 {
+  width: 15px;
+  /* height: 10px; */
+  /* color: black; */
+  border: 1.5px solid black;
+  margin: 5px;
+  margin-left: auto;
+  transition: transform 1s ease;
+}
+
+.toggle .line1 .changeLine,
+.toggle .line3 .changeLine {
+  width: 20px;
 }
 
 .social-links {
@@ -93,8 +105,10 @@ h5 {
   }
 }
 
+/*-----hero----*/
+
 .hero {
-  width: 96vw;
+  width: 100vw;
   height: 100vh;
   position: relative;
   text-align: center;
@@ -107,7 +121,7 @@ h5 {
 .title-logo {
   position: absolute;
   top: 1rem;
-  left: 1rem;
+  left: 5rem;
   display: flex;
   align-items: center;
 }
@@ -171,20 +185,20 @@ h5 {
   left: 0;
   background-color: #fff;
   width: 29rem;
-  height: 100%;
-  border: #000;
+  height: 100vh;
   padding: 1rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
     url(../img/nav-bg.jpeg);
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 95vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   transform: translateX(-100%);
   transition: transform 1s ease;
+  position: fixed;
+  z-index: 1;
 }
 .sidebar-colapse p {
   text-align: center;
@@ -199,12 +213,22 @@ h5 {
   .active {
     transform: translateX(7%);
   }
+  .date {
+    font-size: 10px;
+  }
+}
+@media (max-width: 578px) {
+  .hero-text {
+    top: 45%;
+    left: 55%;
+  }
 }
 @media (max-width: 496px) {
   .sidebar-colapse {
     width: 100%;
   }
 }
+
 /* toggle code end*/
 
 .navbar-header {
@@ -242,8 +266,15 @@ h5 {
 
 @media (max-width: 456px) {
   .search-icon {
-    top: 4.5rem;
-    right: 6.5rem;
+    top: 5rem;
+    right: 9.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .search-icon {
+    top: 5rem;
+    right: 7.5rem;
   }
 }
 
@@ -267,6 +298,479 @@ h5 {
 @media (max-width: 456px) {
   .sidebar-colapse {
     padding: 0;
+    padding: 0.5rem;
     height: 60vh;
   }
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------ABOUT--------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#about {
+  display: flex;
+  text-align: center;
+  background-color: #dddddd;
+  justify-content: center;
+}
+
+.content-wrapper {
+  width: 50%;
+  padding: 5rem 0 5rem 5rem;
+}
+
+.img-wrapper {
+  width: 50%;
+  height: 90vh;
+  position: relative;
+}
+
+.content-wrapper > * {
+  margin: 2rem 0 2rem 2rem;
+}
+
+.content-wrapper h1 {
+  color: rgba(0, 0, 0, 0.514);
+  font-size: 32px;
+}
+
+.content-wrapper h2 {
+  color: var(--primaryColor);
+  font-weight: lighter;
+  font-size: 26px;
+}
+
+.content-wrapper p {
+  color: rgba(0, 0, 0, 0.377);
+}
+
+.about-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-line1 {
+  width: 100px;
+  height: 3px;
+  background-color: var(--primaryColor);
+}
+
+.about-line2 {
+  width: 150px;
+  height: 1px;
+  background-color: var(--primaryColor);
+  margin-top: 6px;
+}
+
+.image-box {
+  width: 25rem;
+  border: 1px solid var(--primaryColor);
+}
+
+.image-box-1 {
+  position: absolute;
+  top: 8.5rem;
+  left: 9rem;
+  z-index: 0;
+}
+
+.image-box-2 {
+  position: absolute;
+  top: 11rem;
+  right: 4rem;
+  z-index: 1;
+}
+
+.image-box-3 {
+  position: absolute;
+  top: 6.5rem;
+  right: 12rem;
+  /* z-index: 2; */
+}
+
+.image-box-4 {
+  position: absolute;
+  top: 5.5rem;
+  right: 2rem;
+  /* z-index: 2; */
+}
+
+.image-box img {
+  width: 100%;
+}
+
+@media (max-width: 1288px) {
+  #about {
+    flex-direction: column;
+    height: 50vh;
+  }
+  .content-wrapper,
+  .img-wrapper {
+    width: 100%;
+  }
+  .content-wrapper {
+    padding: 3rem;
+  }
+  .image-box {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  #about {
+    height: 60vh;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------ROOMS--------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#rooms {
+  padding: 2rem;
+  margin-left: 3.5rem;
+}
+
+#rooms h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: var(--primaryColor);
+  margin: 2rem 0;
+  font-weight: 300;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 35rem;
+  margin: 0.7rem;
+  background-color: #222222;
+  color: white;
+  box-shadow: 3px 3px 5px rgb(212, 212, 212);
+  transition: box-shadow 1s;
+}
+
+.card:hover {
+  box-shadow: 5px 7px 5px rgb(150, 150, 150);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-title,
+.card-desc,
+.price {
+  padding: 1rem 1rem 0 1rem;
+}
+.card-btn {
+  margin: 0 1rem 1rem 1rem;
+  background-color: #222222;
+  color: var(--primaryColor);
+  border: 1px solid var(--primaryColor);
+  padding: 0.5rem;
+  width: 150px;
+  border-radius: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  transition: width 1s ease;
+}
+
+.card-btn i {
+  color: var(--primaryColor);
+}
+
+/* .right-trans{
+  
+} */
+
+.card-btn:hover {
+  width: 180px;
+  /* padding-right: 1rem; */
+  cursor: pointer;
+}
+
+.price {
+  text-align: right;
+}
+
+.rooms-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.rooms-line1 {
+  width: 100px;
+  height: 2px;
+  background-color: var(--primaryColor);
+}
+
+.rooms-line2 {
+  width: 150px;
+  height: 1px;
+  background-color: var(--primaryColor);
+  margin-top: 7px;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.card-desc {
+  color: rgba(255, 255, 255, 0.486);
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.btn-container {
+  width: 100%;
+  height: 20vh;
+  position: relative;
+}
+.rooms-btn {
+  background-color: white;
+  border: 1px solid var(--primaryColor);
+  padding: 1rem;
+  color: var(--primaryColor);
+  width: 180px;
+  margin: 1rem auto;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.8s ease, color 0.8s ease;
+  font-size: 14px;
+}
+
+.rooms-btn:hover {
+  background-color: var(--primaryColor);
+  color: white;
+  cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------TESTIMONIAL--------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#testimonial {
+  padding: 1rem;
+  margin-left: 3.5rem;
+  background-color: #1c1c1c;
+}
+
+#testimonial h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--primaryColor);
+  font-size: 3rem;
+  /* margin-bottom: 1.5rem; */
+  font-weight: 300;
+}
+
+#testimonial > p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.testimonial-card-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  padding: 1rem;
+  display: flex;
+  width: 43vw;
+  background-color: white;
+  margin-bottom: 5rem;
+}
+
+.testimonial-card-img {
+  width: 70rem;
+  height: 10rem;
+  position: relative;
+  top: 2%;
+  right: 6%;
+  z-index: 0;
+}
+
+.testimonial-card-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-card-info > * {
+  margin: 1rem 0;
+}
+
+.testimonial-card-info > p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-card-info > h3 {
+  color: rgba(0, 0, 0, 0.486);
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.testimonial-card-info .p1 {
+  color: var(--primaryColor);
+}
+
+.testimonial-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.testimonial-line1 {
+  width: 100px;
+  height: 2px;
+  background-color: var(--primaryColor);
+}
+
+.testimonial-line2 {
+  width: 150px;
+  height: 1px;
+  background-color: var(--primaryColor);
+  margin-top: 7px;
+}
+
+@media (max-width: 992px) {
+  .testimonial-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .testimonial-card-img {
+    width: 100%;
+    height: 100%;
+    position: none;
+    top: 0;
+    right: 0;
+  }
+  .testimonial-card {
+    padding: 0;
+    /* display: flex; */
+    width: 80vw;
+    /* background-color: white; */
+    /* margin-bottom: 5rem; */
+  }
+  .testimonial-card-info {
+    padding: 5px;
+  }
+  /* .testimonial-card-wrapper {
+    flex-direction: r;
+  } */
+  #rooms.card {
+    width: 90vw;
+    /* margin: 0.7rem;
+    background-color: #222222;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(212, 212, 212);
+    transition: box-shadow 1s;
+    */
+  }
+  #rooms {
+    padding: 2rem;
+    margin-left: 1.8rem;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------CONTACT--------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#contact {
+  padding: 1rem;
+  margin-left: 3.5rem;
+  background-color: #222222;
+  padding-bottom: 4rem;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content h1 {
+  /* width: 45vw; */
+  margin: 1rem 0;
+  color: var(--primaryColor);
+  letter-spacing: 5px;
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+
+form button {
+  color: white;
+  background-color: #da6e22;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+form input {
+  padding: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .contact-wrapper {
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  form button {
+    padding: 1rem;
+  }
+
+  form input {
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 442px) {
+  input {
+    width: 10rem;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------FOOTER--------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------*/
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3.5rem;
+  padding: 1rem;
+  background-color: #1c1c1c;
+  color: rgba(255, 255, 255, 0.329);
+}
+
+#footer .p2 {
+  color: rgba(255, 255, 255, 0.534);
+}
+
+#footer span {
+  color: goldenrod;
 }
