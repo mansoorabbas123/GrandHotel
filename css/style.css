@@ -783,6 +783,23 @@ form input {
   }
 }
 
+@media (max-width: 718px) {
+  #contact {
+    margin-left: 1.7rem;
+  }
+}
+@media (max-width: 582px) {
+  #contact {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 552px) {
+  #contact {
+    margin-left: 2rem;
+  }
+}
+
 /*-----------------------------------------------------------------------------------------------------------
 -----------------------------------------------FOOTER--------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------*/
@@ -802,4 +819,21 @@ form input {
 
 #footer span {
   color: goldenrod;
+}
+
+@media (max-width: 718px) {
+  #footer {
+    margin-left: 1.7rem;
+  }
+}
+@media (max-width: 582px) {
+  #footer {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 552px) {
+  #footer {
+    margin-left: 2rem;
+  }
 }
