@@ -37,31 +37,33 @@ body {
   background-color: rgb(247, 247, 247);
   z-index: 2;
   position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .sidebar .toggle {
   margin-top: 2rem;
 }
-
+/* 
 .toggle .line2 {
   width: 20px;
   border: 1.5px solid black;
 }
 .toggle .line1,
 .toggle .line3 {
-  width: 15px;
-  /* height: 10px; */
-  /* color: black; */
-  border: 1.5px solid black;
+  width: 15px; */
+/* height: 10px; */
+/* color: black; */
+/* border: 1.5px solid black;
   margin: 5px;
   margin-left: auto;
   transition: transform 1s ease;
-}
+} */
 
-.toggle .line1 .changeLine,
+/* .toggle .line1 .changeLine,
 .toggle .line3 .changeLine {
   width: 20px;
-}
+} */
 
 .social-links {
   display: flex;
