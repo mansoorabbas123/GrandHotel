@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 96vh; */
+  height: 100%;
   justify-content: space-between;
   background-color: rgb(247, 247, 247);
   z-index: 2;
@@ -108,8 +108,8 @@ body {
 /*-----hero----*/
 
 .hero {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
@@ -439,11 +439,6 @@ body {
   }
   .image-box {
     display: none;
-  }
-}
-@media (max-width: 375px) {
-  #about {
-    height: 60vh;
   }
 }
 
