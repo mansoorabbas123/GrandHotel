@@ -428,7 +428,7 @@ body {
 @media (max-width: 1288px) {
   #about {
     flex-direction: column;
-    height: 50vh;
+    /* height: 50vh; */
   }
   .content-wrapper,
   .img-wrapper {
